@@ -215,6 +215,15 @@ publish/
 # in these scripts will be unencrypted
 PublishScripts/
 
+# Ignorar imagens Docker
+*.tar
+
+# Ignorar arquivos de log do Docker
+*.log
+
+# Ignorar diretórios de volumes de dados persistentes do Docker
+data/
+
 # NuGet Packages
 *.nupkg
 # NuGet Symbol Packages

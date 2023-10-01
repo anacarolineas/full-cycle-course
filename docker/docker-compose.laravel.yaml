@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  laravel:
+    build: 
+      context: ./laravel
+      dockerfile: Dockerfile.prod
+    image: annehalle/laravel:prod
+    container_name: laravel
+    networks:
+      - minharede
+
+  nginx:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile.prod
+    image: annehalle/nginx:prod
+    container_name: nginx
+    networks:
+      - minharede
+    ports:
+      - "8080:80"
+
+networks:
+  minharede:
+    driver: bridge
