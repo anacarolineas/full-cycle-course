@@ -14,7 +14,7 @@ const connection = mysql.createConnection(config)
 
 const sql = `INSERT INTO people(name) values('Wesley')`
 connection.query(sql)
-connection.end()*/
+connection.end() */
 
 app.get("/", (req, res) => {
     res.send("<h1>Funcionoooooooooou</h1>")
